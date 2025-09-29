@@ -1,15 +1,12 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     
-    // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
         document.body.setAttribute('data-theme', savedTheme);
         updateThemeButton(savedTheme);
     }
     
-    // Theme toggle functionality
     themeToggle.addEventListener('click', function() {
         const currentTheme = document.body.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -28,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a');
     
     navLinks.forEach(link => {
@@ -47,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add subtle animation to skill cards on scroll
     const skillCards = document.querySelectorAll('.skill-card');
     
     const observer = new IntersectionObserver((entries) => {

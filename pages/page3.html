@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>обо мне</title>
+    <link rel="stylesheet" href="../css/style3.css">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="#about">обо мне</a></li>
+                <li><a href="#gallery">галерея</a></li>
+                <li><a href="#contacts">контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="main-title">alexander menkov</h1>
+                <div class="photo-placeholder">
+                    <img src="../dev4_img.png" alt="Моя фотография" class="profile-photo" id="profilePhoto">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title">обо мне</h2>
+            <article class="about-content">
+                <p>я более похожу на универсалиста, чем на специалиста какой-то одной области. помимо IT меня интересует искусство: фотография, экспериментальная музыка, литература, кинематограф, философия, живопись. занимаюсь не только поглощением, но и созданием: пишу эссе, рассказы, сценарии, фотографирую, снимаю, монтирую.</p>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">бесполезный интерактивный элемент</h2>
+            <div class="interactive-section">
+                <button id="colorButton" class="interactive-button">сменить цвет фона</button>
+                <button id="infoButton" class="interactive-button">показать дополнительную информацию</button>
+                <div id="extraInfo" class="hidden-info">
+                    <p>ничего себе!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2 class="section-title">мои фотографии</h2>
+            <div class="gallery">
+                <div class="photo-slot">
+                    <img src="../photos/IMG_5019-5.png" alt="Фото 1" class="gallery-photo">
+            
+                </div>
+                <div class="photo-slot">
+                    <img src="../photos/IMG_5036.JPG" alt="Фото 2" class="gallery-photo">
+                
+                </div>
+                <div class="photo-slot">
+                    <img src="../photos/IMG_5618.JPG" alt="Фото 3" class="gallery-photo">
+                   
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts" class="footer">
+        <div class="footer-content">
+            <h3>Контакты</h3>
+            <ul class="contacts-list">
+                <li><a href="https://t.me/phototeque">телеграм канал</a></li>
+            </ul>
+            <p class="copyright">&copy; homo bulla est // 2025</p>
+        </div>
+    </footer>
+
+    <script src="../js/script3.js"></script>
+</body>
+</html>

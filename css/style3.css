@@ -1,0 +1,313 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+/* Header */
+.header {
+    background-color: #000000;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #000000;
+}
+
+/* Main content */
+
+.section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section:nth-child(even) {
+    background-color: white;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(135deg, #000000 0%, #f8ca95 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease;
+}
+
+.photo-placeholder {
+    margin: 2rem auto;
+    max-width: 300px;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 5px solid white;
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.photo-caption {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* Section titles */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #000000;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #000000;
+}
+
+/* Lists */
+.hobbies-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hobbies-list li {
+    background: white;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobbies-list li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Interactive elements */
+.interactive-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.interactive-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.interactive-button:hover {
+    background-color: #f5da9b;
+    transform: translateY(-2px);
+}
+
+.hidden-info {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: none;
+}
+
+.hidden-info.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.photo-slot {
+    text-align: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-slot:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-photo {
+    width: 100%;
+    height: auto; /* Сохраняем пропорции */
+    object-fit: cover; /* Обрезаем лишнее */
+    aspect-ratio: 4 / 3; /* Фиксируем соотношение сторон */
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.contacts-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.contacts-list li {
+    margin: 0.5rem 0;
+}
+
+.contacts-list a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacts-list a:hover {
+    color: #f5da9b;
+}
+
+.copyright {
+    margin-top: 2rem;
+    color: #bdc3c7;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Мобильная версия (≤ 768px) */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 2rem 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        padding: 4rem 1rem;
+    }
+    
+    .interactive-button {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Десктопная версия (≥ 1024px) */
+@media (min-width: 1024px) {
+    .section {
+        padding: 5rem 2rem;
+    }
+    
+    .main-title {
+        font-size: 3.5rem;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .about-content {
+        columns: 2;
+        gap: 2rem;
+    }
+}
